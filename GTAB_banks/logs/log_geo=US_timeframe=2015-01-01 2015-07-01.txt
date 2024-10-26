@@ -309,3 +309,228 @@ New query calibrated!
 Using ../GTAB_banks\output\google_anchorbanks\google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
 New query 'Valero stock'
 New query calibrated!
+
+2024-10-23 17:25:48.382926
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 17:27:13.407244
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 21:48:59.509980
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 21:50:27.295034
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 21:59:03.985327
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 22:00:25.251877
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 22:16:47.237666
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 22:18:12.286552
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 22:25:18.822111
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 22:26:36.130257
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 22:52:40.467813
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 22:54:03.730640
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 23:40:21.941506
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 23:41:34.795914
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 23:52:45.527434
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-23 23:54:04.312014
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-23 23:55:17.886816
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'TotalEnergies stock'
+New query calibrated!
+
+2024-10-24 00:09:31.144149
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:10:44.057163
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 00:11:52.120526
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'TotalEnergies stock'
+New query calibrated!
+
+2024-10-24 00:15:20.759064
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:16:42.291380
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 00:18:03.851354
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 00:31:28.360175
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:32:50.751285
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 00:34:09.900478
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 00:35:31.907003
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Schlumberger stock'
+New query calibrated!
+
+2024-10-24 00:39:02.108545
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:40:22.348698
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 00:41:40.275281
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 00:46:10.487486
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:47:23.767820
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 00:48:35.385553
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 00:57:29.274772
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 00:58:49.918604
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 01:00:12.008602
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 01:01:29.442417
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 01:08:30.074000
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 01:09:49.264979
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 01:11:04.891125
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 01:12:22.102969
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 01:28:43.149338
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Chevron stock'
+New query calibrated!
+
+2024-10-24 01:30:09.111441
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'Shell stock'
+New query calibrated!
+
+2024-10-24 01:31:26.438400
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!
+
+2024-10-24 01:32:42.253269
+Using ../GTAB_banks/output/google_anchorbanks/google_anchorbank_geo=US_timeframe=2015-01-01 2015-07-01.tsv
+New query 'BP stock'
+New query calibrated!

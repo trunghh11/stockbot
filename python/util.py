@@ -19,14 +19,14 @@ def get_categorical_tickers():
     '''
     ticker_dict = {}
     all_tickers = []
-    ticker_dict['energy'] = ['XOM', 'CVX', 'SHEL', 'PTR', 'TTE', 'BP', 'PBR', 'SNP', 'SLB', 'VLO']
+    ticker_dict['energy'] = ['XOM', 'CVX', 'SHEL', 'BP']
     ticker_dict['materials'] = ['BHP', 'LIN', 'RIO', 'DD', 'SHW', 'CTA-PB', 'APD']
     ticker_dict['industrials'] = ['UPS', 'HON', 'LMT', 'BA', 'GE', 'MMM', 'RTX', 'CAT', 'WM', 'ABB', 'ETN', 'EMR',
                                   'FDX', 'TRI']
     ticker_dict['utilities'] = ['NEE', 'DUK', 'NGG', 'AEP', 'XEL','AWK' ,'ETR', 'PCG']
     ticker_dict['healthcare'] = ['UNH', 'JNJ', 'PFE', 'NVO', 'TMO', 'MRK', 'AZN', 'NVS', 'DHR', 'AMGN', 'CVS', 'GSK',
                                  'ZTS', 'GILD']
-    ticker_dict['financials'] = ['BRK-A', 'V', 'JPM', 'BAC', 'MA', 'WFC', 'C-PJ', 'MS', 'RY', 'AXP']
+    ticker_dict['financials'] = ['BRK-A', 'V', 'JPM', 'BAC', 'MA', 'WFC', 'MS', 'RY', 'AXP']
     ticker_dict['discretionary'] = ['AMZN', 'TSLA', 'HD', 'BABA', 'TM', 'NKE', 'MCD', 'SBUX', 'F', 'MAR', 'GM', 'ORLY',
                                     'LILI', 'HMC', 'CMG', 'HLT']
     ticker_dict['staples'] = ['WMT', 'PG', 'KO', 'COST', 'PEP', 'BUD', 'UL', 'TGT', 'MDLZ', 'CL', 'DG', 'KHC', 'KDP',
@@ -52,9 +52,8 @@ def get_company_names():
     '''
     ticker_dict = {}
     all_tickers = []
-    ticker_dict['energy'] = {'XOM': 'Exxon Mobil', 'CVX': 'Chevron', 'SHEL': 'Shell', 'PTR': 'PetroChina',
-                             'TTE': 'TotalEnergies', 'BP': 'BP', 'PBR': 'Petroleo Brasileiro',
-                             'SNP': 'China Petroleum', 'SLB': 'Schlumberger', 'VLO': 'Valero'}
+    ticker_dict['energy'] = {'XOM': 'Exxon Mobil', 'CVX': 'Chevron', 'SHEL': 'Shell',
+                             'BP': 'BP'}
     '''
     ticker_dict['materials'] = ['BHP', 'LIN', 'RIO', 'DD', 'SHW', 'CTA-PB', 'APD']
     ticker_dict['industrials'] = ['UPS', 'HON', 'LMT', 'BA', 'GE', 'MMM', 'RTX', 'CAT', 'WM', 'ABB', 'ETN', 'EMR',
@@ -145,7 +144,7 @@ class LSTM_Model():
     '''
     def __init__(self,tickerSymbol, start, end,
                  past_history = 60, forward_look = 1, train_test_split = 0.8, batch_size = 30,
-                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 0, infer_train = True,
+                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 1, infer_train = True,
                  depth = 1, naive = False, values = 200, plot_values = True, plot_bot = True,
                  custom_loss = False):
         '''
@@ -370,14 +369,14 @@ class LSTM_Model():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/Stock_prediction_%d_%d_%d_%d_%s_%s.png' % (
+            plt.savefig('../images_stu/Stock_prediction_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
             plt.clf()
             plt.figure()
             plt.plot(self.pred[1:, 0]-self.pred_update[1:,0], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/Difference_%d_%d_%d_%d_%s_%s.png' % (
+            plt.savefig('../images_stu/Difference_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
             plt.clf()
             np.savez('../save_mat/store_%d_%d_%d_%d_%s_%s.png'%(
@@ -391,14 +390,14 @@ class LSTM_Model():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/Stock_prediction_%d_%d_%d_%d_%s_%s.png'%(
+            plt.savefig('../images_stu/Stock_prediction_%d_%d_%d_%d_%s_%s.png'%(
             self.depth,int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
             plt.clf()
             plt.figure()
             plt.plot(self.pred[1:] - self.pred_update[1:], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/Difference_%d_%d_%d_%d_%s_%s.png' % (
+            plt.savefig('../images_stu/Difference_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
             plt.clf()
             np.savez('../save_mat/store_%d_%d_%d_%d_%s_%s.png' % (
@@ -416,7 +415,7 @@ class LSTM_Model():
         '''
         Plot the network architecture
         '''
-        dot_img_file = '../images/LSTM_arch_depth%d_naive%d.png' %( self.depth, int(self.naive))
+        dot_img_file = '../images_stu/LSTM_arch_depth%d_naive%d.png' %( self.depth, int(self.naive))
         tf.keras.utils.plot_model(self.model, to_file=dot_img_file, show_shapes=True)
     
 
@@ -476,7 +475,7 @@ class LSTM_Model():
         plt.xlabel("Days")
         plt.ylabel("Percentage growth")
         plt.legend()
-        plt.savefig('../images/Bot_prediction_%d_%d_%d_%d_%s_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
+        plt.savefig('../images_stu/Bot_prediction_%d_%d_%d_%d_%s_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)))
         np.savez('../save_mat/bot_%d_%d_%d_%d_%s_%s.png' % (
         self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)),
         ideal = bot_ideal, pred  = bot_pred, pred_up = bot_pred_update)
@@ -489,7 +488,7 @@ class LSTM_ED_Model():
     '''
     def __init__(self,tickerSymbol, start, end,
                  past_history = 60, forward_look = 1, train_test_split = 0.8, batch_size = 30,
-                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 0,
+                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 1,
                  depth = 1, naive = False, values = 200, tickerSymbolList = None, LSTM_latent_dim = 20):
         '''
         Initialize parameters for the class
@@ -702,9 +701,13 @@ class LSTM_ED_Model():
         states_value = self.encoder_model.predict(xtest[0:1,:,:])
         decoder_input = xtest[0:1, -1, :]  # choosing the most recent value to feed the decoder
         for i in range(self.values):
+            print(f"decoder_input shape: {decoder_input.shape}")
+            print(f"states_value shape: {[s.shape for s in states_value]}")
+            print(f"decoder_input: {decoder_input}, states_value: {states_value}" )
             new_pred, h, c = self.decoder_model.predict([decoder_input] + states_value)
+            print(f"new_pred shape: {new_pred.shape}")
             y_pred = new_pred.reshape((-1, 1))
-            decoder_input = new_pred
+            decoder_input = y_pred
             states_value = [h, c]
             self.pred_update.append(y_pred)
         self.pred_update = np.array(self.pred_update)
@@ -736,7 +739,7 @@ class LSTM_ED_Model():
             # plt.ylabel("Normalized stock price")
             # plt.title('The relative RMS error is %f' % self.RMS_error)
             # plt.legend()
-            # plt.savefig('../images/ED_Stock_prediction_%d_%d_%d_%d_%s.png' % (
+            # plt.savefig('../images_stu/ED_Stock_prediction_%d_%d_%d_%d_%s.png' % (
             #     self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             # plt.figure()
             # plt.plot(self.pred[1:, 0]-self.pred_update[1:,0], label='difference (%s)' % self.ts)
@@ -748,7 +751,7 @@ class LSTM_ED_Model():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/ED_Stock_prediction_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/ED_Stock_prediction_%d_%d_%d_%d_%s.png' % (
                 self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.clf()
             np.savez('../save_mat/EDstore_%d_%d_%d_%d_%s_%s.png' % (
@@ -761,7 +764,7 @@ class LSTM_ED_Model():
         '''
         Plot the network architecture
         '''
-        dot_img_file = '../images/LSTM_ED_arch_depth%d_naive%d.png' %( self.depth, int(self.naive))
+        dot_img_file = '../images_stu/LSTM_ED_arch_depth%d_naive%d.png' %( self.depth, int(self.naive))
         tf.keras.utils.plot_model(self.model, to_file=dot_img_file, show_shapes=True)
     	        
     def full_workflow(self, model=None):
@@ -810,7 +813,7 @@ class LSTM_ED_Model():
         plt.xlabel("Days")
         plt.ylabel("Percentage growth")
         plt.legend()
-        plt.savefig('../images/ED_Bot_prediction_%d_%d_%d_%d.png' % (
+        plt.savefig('../images_stu/ED_Bot_prediction_%d_%d_%d_%d.png' % (
         self.depth, int(self.naive), self.past_history, self.forward_look))
         np.savez('../save_mat/EDbot_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)),
@@ -825,7 +828,7 @@ class LSTM_Model_MS():
     '''
     def __init__(self,tickerSymbol, start, end,
                  past_history = 60, forward_look = 1, train_test_split = 0.8, batch_size = 30,
-                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 0, infer_train = True,
+                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = 1, infer_train = True,
                  depth = 1, naive = False, values = 200, plot_values = True, plot_bot = True,
                  tickerSymbolList = None, sameTickerTestTrain = True):
         '''
@@ -1099,13 +1102,13 @@ class LSTM_Model_MS():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/MultiStock_prediction_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/MultiStock_prediction_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.figure()
             plt.plot(self.pred[1:, 0]-self.pred_update[1:,0], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/MSDifference_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/MSDifference_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.clf()
             np.savez('../save_mat/MSstore_%d_%d_%d_%d_%s_%s.png' % (
@@ -1119,13 +1122,13 @@ class LSTM_Model_MS():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/MultiStock_prediction_%d_%d_%d_%d_%s.png'%(
+            plt.savefig('../images_stu/MultiStock_prediction_%d_%d_%d_%d_%s.png'%(
             self.depth,int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.figure()
             plt.plot(self.pred[1:] - self.pred_update[1:], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/MSDifference_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/MSDifference_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.clf()
             np.savez('../save_mat/MSstore_%d_%d_%d_%d_%s_%s.png' % (
@@ -1217,7 +1220,7 @@ class LSTM_Model_MS():
         plt.xlabel("Days")
         plt.ylabel("Percentage growth")
         plt.legend()
-        plt.savefig('../images/MSBot_prediction_%d_%d_%d_%d_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
+        plt.savefig('../images_stu/MSBot_prediction_%d_%d_%d_%d_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
         np.savez('../save_mat/MSbot_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)),
                  ideal=bot_ideal, pred=bot_pred, pred_up=bot_pred_update)
@@ -1231,7 +1234,7 @@ class LSTM_Model_MS_GT():
     '''
     def __init__(self,tickerSymbol, tickerName, start = '2010-01-01', end = '2020-12-31',
                  past_history = 60, forward_look = 1, train_test_split = 0.8, batch_size = 30,
-                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = False, infer_train = True,
+                 epochs = 50, steps_per_epoch = 200, validation_steps = 50, verbose = True, infer_train = True,
                  depth = 1, naive = False, values = 200, plot_values = True, plot_bot = True,
                  tickerSymbolList = None, tickerNameDict = None, sameTickerTestTrain = True):
         '''
@@ -1346,6 +1349,14 @@ class LSTM_Model_MS_GT():
             t.set_active_gtab("google_anchorbank_geo=US_timeframe=" + timeframe_str + ".tsv")
             nq = t.new_query(query)
             trend_val = nq['max_ratio'].copy()
+            # if (not isinstance(nq, int)):
+            #     tmp = nq
+
+            # if (isinstance(nq, int)):
+            #     trend_val = tmp['max_ratio'].copy()
+            # else: 
+            #     trend_val = nq['max_ratio'].copy()
+
             if i == 0:
                 last_val = trend_val[-1:].values
                 trend_val = trend_val[:-1]
@@ -1365,6 +1376,10 @@ class LSTM_Model_MS_GT():
             t.set_active_gtab("google_anchorbank_geo=US_timeframe=" + timeframe_str + ".tsv")
             nq = t.new_query(query)
             trend_val = nq['max_ratio'].copy()
+            # if (isinstance(nq, int)):
+            #     trend_val = tmp['max_ratio'].copy()
+            # else: 
+            #     trend_val = nq['max_ratio'].copy()
             if trend_val[0] != 0:
                 trend_val = trend_val * (last_val / trend_val[0])
             else:
@@ -1558,13 +1573,13 @@ class LSTM_Model_MS_GT():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/GTMultiStock_prediction_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/GTMultiStock_prediction_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.figure()
             plt.plot(self.pred[1:, 0]-self.pred_update[1:,0], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/GTMSDifference_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/GTMSDifference_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.clf()
             np.savez('../save_mat/GTMSstore_%d_%d_%d_%d_%s_%s.png' % (
@@ -1578,13 +1593,13 @@ class LSTM_Model_MS_GT():
             plt.ylabel("Normalized stock price")
             plt.title('The relative RMS error is %f' % self.RMS_error)
             plt.legend()
-            plt.savefig('../images/GTMultiStock_prediction_%d_%d_%d_%d_%s.png'%(
+            plt.savefig('../images_stu/GTMultiStock_prediction_%d_%d_%d_%d_%s.png'%(
             self.depth,int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.figure()
             plt.plot(self.pred[1:,0] - self.pred_update[1:,0], label='difference (%s)' % self.ts)
             plt.xlabel("Days")
             plt.ylabel("Prediction difference")
-            plt.savefig('../images/GTMSDifference_%d_%d_%d_%d_%s.png' % (
+            plt.savefig('../images_stu/GTMSDifference_%d_%d_%d_%d_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
             plt.clf()
             np.savez('../save_mat/GTMSstore_%d_%d_%d_%d_%s_%s.png' % (
@@ -1676,7 +1691,7 @@ class LSTM_Model_MS_GT():
         plt.xlabel("Days")
         plt.ylabel("Percentage growth")
         plt.legend()
-        plt.savefig('../images/GTMSBot_prediction_%d_%d_%d_%d_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
+        plt.savefig('../images_stu/GTMSBot_prediction_%d_%d_%d_%d_%s.png' % (self.depth, int(self.naive), self.past_history, self.forward_look, self.ts))
         np.savez('../save_mat/GTMSbot_%d_%d_%d_%d_%s_%s.png' % (
             self.depth, int(self.naive), self.past_history, self.forward_look, self.ts, int(self.custom_loss)),
                  ideal=bot_ideal, pred=bot_pred, pred_up=bot_pred_update)
