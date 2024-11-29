@@ -22,40 +22,49 @@ ticker_dict, tickerSymbols = get_categorical_tickers()
 start="2010-01-01"
 end="2019-12-31"
 ##############################################
-tickeranalysis = tickerSymbols[0] # Mã BRK-A
+tickeranalysis = tickerSymbols[1] # Mã GOOG
+
+# LSTM_1 = LSTM_Model_with_Indicators(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
+# LSTM_1.full_workflow_and_plot()
+# LSTM_1.plot_bot_decision()
+
 LSTM_1 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
 LSTM_1.full_workflow_and_plot()
-plt.clf()
 LSTM_1.plot_bot_decision()
 plt.clf()
-LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
-LSTM_2.full_workflow_and_plot()
-plt.clf()
-LSTM_2.plot_bot_decision()
-plt.clf()
+
+# LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
+# LSTM_2.full_workflow_and_plot()
+# LSTM_2.plot_bot_decision()
+# plt.clf()
+
+# LSTM_3 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 1)
+# LSTM_3.full_workflow_and_plot()
+# LSTM_3.plot_bot_decision()
+
 # plt.show()
 ##############################################
-tickeranalysis = tickerSymbols[1] # Mã GOOG
-LSTM_1 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
-LSTM_1.full_workflow_and_plot()
-plt.clf()
-LSTM_1.plot_bot_decision()
-plt.clf()
-LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
-LSTM_2.full_workflow_and_plot()
-plt.clf()
-LSTM_2.plot_bot_decision()
-plt.clf()
-plt.show()
+# tickeranalysis = tickerSymbols[1] # Mã GOOG
+# LSTM_1 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
+# LSTM_1.full_workflow_and_plot()
+# plt.clf()
+# LSTM_1.plot_bot_decision()
+# plt.clf()
+# LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
+# LSTM_2.full_workflow_and_plot()
+# plt.clf()
+# LSTM_2.plot_bot_decision()
+# plt.clf()
+# plt.show()
 ##############################################
-tickeranalysis = tickerSymbols[2] # Mã MSFT
-LSTM_1 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
-LSTM_1.full_workflow_and_plot()
-plt.clf()
-LSTM_1.plot_bot_decision()
-plt.clf()
-LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
-LSTM_2.full_workflow_and_plot()
-plt.clf()
-LSTM_2.plot_bot_decision()
-plt.clf()
+# tickeranalysis = tickerSymbols[2] # Mã MSFT
+# LSTM_1 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0, naive = True)
+# LSTM_1.full_workflow_and_plot()
+# plt.clf()
+# LSTM_1.plot_bot_decision()
+# plt.clf()
+# LSTM_2 = LSTM_Model(tickerSymbol = tickeranalysis, start = start, end = end, depth = 0)
+# LSTM_2.full_workflow_and_plot()
+# plt.clf()
+# LSTM_2.plot_bot_decision()
+# plt.clf()

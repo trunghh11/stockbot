@@ -3,7 +3,7 @@ import sys, os
 import matplotlib.pyplot as plt
 
 sys.path.append('../python')
-from util import *
+from util_1 import *
 from copy import deepcopy
 from scipy.optimize import curve_fit
 def optimize(x,a,b):
